@@ -1,0 +1,2 @@
+#!/bin/sh
+colorpicker --short --one-shot | xclip -selection clipboard

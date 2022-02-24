@@ -1,0 +1,13 @@
+#!/bin/sh
+
+clear
+for (( ; ; ))
+do
+	echo "Currntly torrenting"
+	transmission-remote -l
+	sleep 1
+	#if [["$1" == "q"]]; then
+		#echo "program terminated successfully" && exit 1
+	#fi
+	clear
+done

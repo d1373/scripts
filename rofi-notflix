@@ -1,0 +1,4 @@
+#!/bin/sh
+movie=$(rofi -l 0 -theme ~/.config/rofi/themes/dmenu.rasi -show notflix -dmenu)
+notflix $movie
+

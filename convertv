@@ -1,0 +1,3 @@
+#!/bin/sh
+mkdir transcoded; for i in $1; do ffmpeg -i "$i" -c:v h264_nvenc -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "transcoded/${i%.*}.mov"; done
+#mkdir transcoded;ffmpeg -i $1 -c:v h264_nvenc -profile:v h264_nvenc -c:a pcm_s16le -f mov "transcoded/$1.mov"

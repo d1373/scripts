@@ -1,0 +1,12 @@
+#!/bin/sh
+
+ #.config/fzf-menu/fzf-opfl
+
+#file=$HOME/$(fzf)
+
+#setsid xdg-open $file &
+#exit
+xdg-open "$(rg --no-messages --files ~/dotfiles /mnt ~/wallpaper ~/pic ~/Documents ~/Downloads ~/vid ~/scripts \
+    -g "!{*.srt,*.rar,*.txt,*.zip,*.nfo}" | rofi -threads 0 \
+	-theme-str "#window { width: 900;}" \
+    -dmenu -sort -sorting-method fzf -i -p "all")"

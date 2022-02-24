@@ -1,0 +1,3 @@
+#!/bin/sh
+mkdir transcoded; for i in $1; do ffmpeg -i "$i" -c:a pcm_s16le transcoded/$i.wav; done
+
