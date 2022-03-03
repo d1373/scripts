@@ -1,0 +1,2 @@
+#!/bin/sh
+echo $(espanso match list | rofi -dmenu | awk -F " - " '{print $NF}') | xclip -sel c
