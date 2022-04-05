@@ -1,3 +1,3 @@
 #!/bin/sh
 session=`tmux ls | rofi -dmenu | awk -F ":" '{print $1}'` 
-kitty tmux -u a -t $session
+alacritty -e tmux -u a -t $session
